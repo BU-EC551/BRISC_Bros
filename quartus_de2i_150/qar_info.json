@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/alan/Documents/ec551-project/",
+	"acds_version" : "Version 17.1.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 16.04.4",
+	"qpf" : "quartus/brisc551.qpf"
+}

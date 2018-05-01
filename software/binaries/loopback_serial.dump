@@ -1,0 +1,100 @@
+
+loopback_serial:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <kernel-0x10>:
+   0:	00000013          	addi	zero,zero,0
+   4:	00000013          	addi	zero,zero,0
+   8:	00000013          	addi	zero,zero,0
+   c:	00000013          	addi	zero,zero,0
+
+00000010 <kernel>:
+  10:	00000013          	addi	zero,zero,0
+  14:	00000093          	addi	ra,zero,0
+  18:	1c200113          	addi	sp,zero,450
+  1c:	00000193          	addi	gp,zero,0
+  20:	00000213          	addi	tp,zero,0
+  24:	00000293          	addi	t0,zero,0
+  28:	00000313          	addi	t1,zero,0
+  2c:	00000393          	addi	t2,zero,0
+  30:	00000413          	addi	s0,zero,0
+  34:	00000513          	addi	a0,zero,0
+  38:	00000593          	addi	a1,zero,0
+  3c:	00000613          	addi	a2,zero,0
+  40:	00000993          	addi	s3,zero,0
+  44:	00000713          	addi	a4,zero,0
+  48:	00000793          	addi	a5,zero,0
+  4c:	00000813          	addi	a6,zero,0
+  50:	00000893          	addi	a7,zero,0
+  54:	00000913          	addi	s2,zero,0
+  58:	00000993          	addi	s3,zero,0
+  5c:	00000a13          	addi	s4,zero,0
+  60:	00000a93          	addi	s5,zero,0
+  64:	00000b13          	addi	s6,zero,0
+  68:	00000b93          	addi	s7,zero,0
+  6c:	00000c13          	addi	s8,zero,0
+  70:	00000c93          	addi	s9,zero,0
+  74:	00000d13          	addi	s10,zero,0
+  78:	00000d93          	addi	s11,zero,0
+  7c:	00000e13          	addi	t3,zero,0
+  80:	00000e93          	addi	t4,zero,0
+  84:	00000f13          	addi	t5,zero,0
+  88:	00000f93          	addi	t6,zero,0
+  8c:	00000097          	auipc	ra,0x0
+  90:	038080e7          	jalr	ra,56(ra) # c4 <main>
+  94:	00000013          	addi	zero,zero,0
+  98:	00050493          	addi	s1,a0,0
+  9c:	00000013          	addi	zero,zero,0
+  a0:	00000013          	addi	zero,zero,0
+  a4:	00000013          	addi	zero,zero,0
+  a8:	00000013          	addi	zero,zero,0
+  ac:	00000097          	auipc	ra,0x0
+  b0:	000080e7          	jalr	ra,0(ra) # ac <kernel+0x9c>
+  b4:	00000013          	addi	zero,zero,0
+  b8:	00000013          	addi	zero,zero,0
+  bc:	00000013          	addi	zero,zero,0
+  c0:	00000013          	addi	zero,zero,0
+
+000000c4 <main>:
+  c4:	fd010113          	addi	sp,sp,-48
+  c8:	02812623          	sw	s0,44(sp)
+  cc:	03010413          	addi	s0,sp,48
+  d0:	900007b7          	lui	a5,0x90000
+  d4:	02078793          	addi	a5,a5,32 # 90000020 <__global_pointer$+0x8ffff6bc>
+  d8:	fef42623          	sw	a5,-20(s0)
+  dc:	900007b7          	lui	a5,0x90000
+  e0:	01078793          	addi	a5,a5,16 # 90000010 <__global_pointer$+0x8ffff6ac>
+  e4:	fef42423          	sw	a5,-24(s0)
+  e8:	900007b7          	lui	a5,0x90000
+  ec:	02478793          	addi	a5,a5,36 # 90000024 <__global_pointer$+0x8ffff6c0>
+  f0:	fef42223          	sw	a5,-28(s0)
+  f4:	900007b7          	lui	a5,0x90000
+  f8:	01478793          	addi	a5,a5,20 # 90000014 <__global_pointer$+0x8ffff6b0>
+  fc:	fef42023          	sw	a5,-32(s0)
+ 100:	00000013          	addi	zero,zero,0
+ 104:	fe042783          	lw	a5,-32(s0)
+ 108:	0007a783          	lw	a5,0(a5)
+ 10c:	fe078ce3          	beq	a5,zero,104 <main+0x40>
+ 110:	fe842783          	lw	a5,-24(s0)
+ 114:	0007a783          	lw	a5,0(a5)
+ 118:	fcf42e23          	sw	a5,-36(s0)
+ 11c:	00000013          	addi	zero,zero,0
+ 120:	fe442783          	lw	a5,-28(s0)
+ 124:	0007a783          	lw	a5,0(a5)
+ 128:	fe078ce3          	beq	a5,zero,120 <main+0x5c>
+ 12c:	fec42783          	lw	a5,-20(s0)
+ 130:	fdc42703          	lw	a4,-36(s0)
+ 134:	00e7a023          	sw	a4,0(a5)
+ 138:	fc9ff06f          	jal	zero,100 <main+0x3c>
+ 13c:	00000013          	addi	zero,zero,0
+ 140:	00000013          	addi	zero,zero,0
+ 144:	00000013          	addi	zero,zero,0
+ 148:	00000013          	addi	zero,zero,0
+ 14c:	00000097          	auipc	ra,0x0
+ 150:	000080e7          	jalr	ra,0(ra) # 14c <main+0x88>
+ 154:	00000013          	addi	zero,zero,0
+ 158:	00000013          	addi	zero,zero,0
+ 15c:	00000013          	addi	zero,zero,0
+ 160:	00000013          	addi	zero,zero,0

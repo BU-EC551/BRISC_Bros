@@ -1,0 +1,890 @@
+
+@0        // <kernel-0x10>
+00000013  // 00000000 addi	zero,zero,0
+00000013  // 00000004 addi	zero,zero,0
+00000013  // 00000008 addi	zero,zero,0
+00000013  // 0000000c addi	zero,zero,0
+
+@4        // <kernel>
+00000013  // 00000010 addi	zero,zero,0
+00000093  // 00000014 addi	ra,zero,0
+1c200113  // 00000018 addi	sp,zero,450
+00000193  // 0000001c addi	gp,zero,0
+00000213  // 00000020 addi	tp,zero,0
+00000293  // 00000024 addi	t0,zero,0
+00000313  // 00000028 addi	t1,zero,0
+00000393  // 0000002c addi	t2,zero,0
+00000413  // 00000030 addi	s0,zero,0
+00000513  // 00000034 addi	a0,zero,0
+00000593  // 00000038 addi	a1,zero,0
+00000613  // 0000003c addi	a2,zero,0
+00000993  // 00000040 addi	s3,zero,0
+00000713  // 00000044 addi	a4,zero,0
+00000793  // 00000048 addi	a5,zero,0
+00000813  // 0000004c addi	a6,zero,0
+00000893  // 00000050 addi	a7,zero,0
+00000913  // 00000054 addi	s2,zero,0
+00000993  // 00000058 addi	s3,zero,0
+00000a13  // 0000005c addi	s4,zero,0
+00000a93  // 00000060 addi	s5,zero,0
+00000b13  // 00000064 addi	s6,zero,0
+00000b93  // 00000068 addi	s7,zero,0
+00000c13  // 0000006c addi	s8,zero,0
+00000c93  // 00000070 addi	s9,zero,0
+00000d13  // 00000074 addi	s10,zero,0
+00000d93  // 00000078 addi	s11,zero,0
+00000e13  // 0000007c addi	t3,zero,0
+00000e93  // 00000080 addi	t4,zero,0
+00000f13  // 00000084 addi	t5,zero,0
+00000f93  // 00000088 addi	t6,zero,0
+00000097  // 0000008c auipc	ra,0x0
+038080e7  // 00000090 jalr	ra,56(ra) # c4 <main>
+00000013  // 00000094 addi	zero,zero,0
+00050493  // 00000098 addi	s1,a0,0
+00000013  // 0000009c addi	zero,zero,0
+00000013  // 000000a0 addi	zero,zero,0
+00000013  // 000000a4 addi	zero,zero,0
+00000013  // 000000a8 addi	zero,zero,0
+00000097  // 000000ac auipc	ra,0x0
+000080e7  // 000000b0 jalr	ra,0(ra) # ac <kernel+0x9c>
+00000013  // 000000b4 addi	zero,zero,0
+00000013  // 000000b8 addi	zero,zero,0
+00000013  // 000000bc addi	zero,zero,0
+00000013  // 000000c0 addi	zero,zero,0
+
+@31       // <main>
+fe010113  // 000000c4 addi	sp,sp,-32
+00112e23  // 000000c8 sw	ra,28(sp)
+00812c23  // 000000cc sw	s0,24(sp)
+02010413  // 000000d0 addi	s0,sp,32
+00000097  // 000000d4 auipc	ra,0x0
+0fc080e7  // 000000d8 jalr	ra,252(ra) # 1d0 <print_hello>
+00000097  // 000000dc auipc	ra,0x0
+25c080e7  // 000000e0 jalr	ra,604(ra) # 338 <print_mode>
+00001097  // 000000e4 auipc	ra,0x1
+948080e7  // 000000e8 jalr	ra,-1720(ra) # a2c <rx_byte>
+fea42423  // 000000ec sw	a0,-24(s0)
+fe842783  // 000000f0 lw	a5,-24(s0)
+00078513  // 000000f4 addi	a0,a5,0
+00001097  // 000000f8 auipc	ra,0x1
+980080e7  // 000000fc jalr	ra,-1664(ra) # a78 <tx_byte>
+fe042623  // 00000100 sw	zero,-20(s0)
+0100006f  // 00000104 jal	zero,114 <main+0x50>
+00001097  // 00000108 auipc	ra,0x1
+924080e7  // 0000010c jalr	ra,-1756(ra) # a2c <rx_byte>
+fea42623  // 00000110 sw	a0,-20(s0)
+fec42703  // 00000114 lw	a4,-20(s0)
+00d00793  // 00000118 addi	a5,zero,13
+fef716e3  // 0000011c bne	a4,a5,108 <main+0x44>
+00a00513  // 00000120 addi	a0,zero,10
+00001097  // 00000124 auipc	ra,0x1
+954080e7  // 00000128 jalr	ra,-1708(ra) # a78 <tx_byte>
+00d00513  // 0000012c addi	a0,zero,13
+00001097  // 00000130 auipc	ra,0x1
+948080e7  // 00000134 jalr	ra,-1720(ra) # a78 <tx_byte>
+fe842783  // 00000138 lw	a5,-24(s0)
+04200713  // 0000013c addi	a4,zero,66
+02e78663  // 00000140 beq	a5,a4,16c <main+0xa8>
+04900713  // 00000144 addi	a4,zero,73
+00e78c63  // 00000148 beq	a5,a4,160 <main+0x9c>
+04100713  // 0000014c addi	a4,zero,65
+02e79463  // 00000150 bne	a5,a4,178 <main+0xb4>
+00000097  // 00000154 auipc	ra,0x0
+494080e7  // 00000158 jalr	ra,1172(ra) # 5e8 <calculator>
+0700006f  // 0000015c jal	zero,1cc <main+0x108>
+00000097  // 00000160 auipc	ra,0x0
+724080e7  // 00000164 jalr	ra,1828(ra) # 884 <interrupt>
+0640006f  // 00000168 jal	zero,1cc <main+0x108>
+00000097  // 0000016c auipc	ra,0x0
+2f8080e7  // 00000170 jalr	ra,760(ra) # 464 <fibonacci>
+0580006f  // 00000174 jal	zero,1cc <main+0x108>
+04500513  // 00000178 addi	a0,zero,69
+00001097  // 0000017c auipc	ra,0x1
+8fc080e7  // 00000180 jalr	ra,-1796(ra) # a78 <tx_byte>
+07200513  // 00000184 addi	a0,zero,114
+00001097  // 00000188 auipc	ra,0x1
+8f0080e7  // 0000018c jalr	ra,-1808(ra) # a78 <tx_byte>
+07200513  // 00000190 addi	a0,zero,114
+00001097  // 00000194 auipc	ra,0x1
+8e4080e7  // 00000198 jalr	ra,-1820(ra) # a78 <tx_byte>
+06f00513  // 0000019c addi	a0,zero,111
+00001097  // 000001a0 auipc	ra,0x1
+8d8080e7  // 000001a4 jalr	ra,-1832(ra) # a78 <tx_byte>
+07200513  // 000001a8 addi	a0,zero,114
+00001097  // 000001ac auipc	ra,0x1
+8cc080e7  // 000001b0 jalr	ra,-1844(ra) # a78 <tx_byte>
+00a00513  // 000001b4 addi	a0,zero,10
+00001097  // 000001b8 auipc	ra,0x1
+8c0080e7  // 000001bc jalr	ra,-1856(ra) # a78 <tx_byte>
+00d00513  // 000001c0 addi	a0,zero,13
+00001097  // 000001c4 auipc	ra,0x1
+8b4080e7  // 000001c8 jalr	ra,-1868(ra) # a78 <tx_byte>
+f11ff06f  // 000001cc jal	zero,dc <main+0x18>
+
+@74       // <print_hello>
+ff010113  // 000001d0 addi	sp,sp,-16
+00112623  // 000001d4 sw	ra,12(sp)
+00812423  // 000001d8 sw	s0,8(sp)
+01010413  // 000001dc addi	s0,sp,16
+00a00513  // 000001e0 addi	a0,zero,10
+00001097  // 000001e4 auipc	ra,0x1
+894080e7  // 000001e8 jalr	ra,-1900(ra) # a78 <tx_byte>
+00d00513  // 000001ec addi	a0,zero,13
+00001097  // 000001f0 auipc	ra,0x1
+888080e7  // 000001f4 jalr	ra,-1912(ra) # a78 <tx_byte>
+04800513  // 000001f8 addi	a0,zero,72
+00001097  // 000001fc auipc	ra,0x1
+87c080e7  // 00000200 jalr	ra,-1924(ra) # a78 <tx_byte>
+06500513  // 00000204 addi	a0,zero,101
+00001097  // 00000208 auipc	ra,0x1
+870080e7  // 0000020c jalr	ra,-1936(ra) # a78 <tx_byte>
+06c00513  // 00000210 addi	a0,zero,108
+00001097  // 00000214 auipc	ra,0x1
+864080e7  // 00000218 jalr	ra,-1948(ra) # a78 <tx_byte>
+06c00513  // 0000021c addi	a0,zero,108
+00001097  // 00000220 auipc	ra,0x1
+858080e7  // 00000224 jalr	ra,-1960(ra) # a78 <tx_byte>
+06f00513  // 00000228 addi	a0,zero,111
+00001097  // 0000022c auipc	ra,0x1
+84c080e7  // 00000230 jalr	ra,-1972(ra) # a78 <tx_byte>
+02c00513  // 00000234 addi	a0,zero,44
+00001097  // 00000238 auipc	ra,0x1
+840080e7  // 0000023c jalr	ra,-1984(ra) # a78 <tx_byte>
+02000513  // 00000240 addi	a0,zero,32
+00001097  // 00000244 auipc	ra,0x1
+834080e7  // 00000248 jalr	ra,-1996(ra) # a78 <tx_byte>
+06d00513  // 0000024c addi	a0,zero,109
+00001097  // 00000250 auipc	ra,0x1
+828080e7  // 00000254 jalr	ra,-2008(ra) # a78 <tx_byte>
+07900513  // 00000258 addi	a0,zero,121
+00001097  // 0000025c auipc	ra,0x1
+81c080e7  // 00000260 jalr	ra,-2020(ra) # a78 <tx_byte>
+02000513  // 00000264 addi	a0,zero,32
+00001097  // 00000268 auipc	ra,0x1
+810080e7  // 0000026c jalr	ra,-2032(ra) # a78 <tx_byte>
+06e00513  // 00000270 addi	a0,zero,110
+00001097  // 00000274 auipc	ra,0x1
+804080e7  // 00000278 jalr	ra,-2044(ra) # a78 <tx_byte>
+06100513  // 0000027c addi	a0,zero,97
+00000097  // 00000280 auipc	ra,0x0
+7f8080e7  // 00000284 jalr	ra,2040(ra) # a78 <tx_byte>
+06d00513  // 00000288 addi	a0,zero,109
+00000097  // 0000028c auipc	ra,0x0
+7ec080e7  // 00000290 jalr	ra,2028(ra) # a78 <tx_byte>
+06500513  // 00000294 addi	a0,zero,101
+00000097  // 00000298 auipc	ra,0x0
+7e0080e7  // 0000029c jalr	ra,2016(ra) # a78 <tx_byte>
+02000513  // 000002a0 addi	a0,zero,32
+00000097  // 000002a4 auipc	ra,0x0
+7d4080e7  // 000002a8 jalr	ra,2004(ra) # a78 <tx_byte>
+06900513  // 000002ac addi	a0,zero,105
+00000097  // 000002b0 auipc	ra,0x0
+7c8080e7  // 000002b4 jalr	ra,1992(ra) # a78 <tx_byte>
+07300513  // 000002b8 addi	a0,zero,115
+00000097  // 000002bc auipc	ra,0x0
+7bc080e7  // 000002c0 jalr	ra,1980(ra) # a78 <tx_byte>
+02000513  // 000002c4 addi	a0,zero,32
+00000097  // 000002c8 auipc	ra,0x0
+7b0080e7  // 000002cc jalr	ra,1968(ra) # a78 <tx_byte>
+04200513  // 000002d0 addi	a0,zero,66
+00000097  // 000002d4 auipc	ra,0x0
+7a4080e7  // 000002d8 jalr	ra,1956(ra) # a78 <tx_byte>
+05200513  // 000002dc addi	a0,zero,82
+00000097  // 000002e0 auipc	ra,0x0
+798080e7  // 000002e4 jalr	ra,1944(ra) # a78 <tx_byte>
+04900513  // 000002e8 addi	a0,zero,73
+00000097  // 000002ec auipc	ra,0x0
+78c080e7  // 000002f0 jalr	ra,1932(ra) # a78 <tx_byte>
+05300513  // 000002f4 addi	a0,zero,83
+00000097  // 000002f8 auipc	ra,0x0
+780080e7  // 000002fc jalr	ra,1920(ra) # a78 <tx_byte>
+04300513  // 00000300 addi	a0,zero,67
+00000097  // 00000304 auipc	ra,0x0
+774080e7  // 00000308 jalr	ra,1908(ra) # a78 <tx_byte>
+02d00513  // 0000030c addi	a0,zero,45
+00000097  // 00000310 auipc	ra,0x0
+768080e7  // 00000314 jalr	ra,1896(ra) # a78 <tx_byte>
+05600513  // 00000318 addi	a0,zero,86
+00000097  // 0000031c auipc	ra,0x0
+75c080e7  // 00000320 jalr	ra,1884(ra) # a78 <tx_byte>
+00000013  // 00000324 addi	zero,zero,0
+00c12083  // 00000328 lw	ra,12(sp)
+00812403  // 0000032c lw	s0,8(sp)
+01010113  // 00000330 addi	sp,sp,16
+00008067  // 00000334 jalr	zero,0(ra)
+
+@ce       // <print_mode>
+ff010113  // 00000338 addi	sp,sp,-16
+00112623  // 0000033c sw	ra,12(sp)
+00812423  // 00000340 sw	s0,8(sp)
+01010413  // 00000344 addi	s0,sp,16
+00a00513  // 00000348 addi	a0,zero,10
+00000097  // 0000034c auipc	ra,0x0
+72c080e7  // 00000350 jalr	ra,1836(ra) # a78 <tx_byte>
+00d00513  // 00000354 addi	a0,zero,13
+00000097  // 00000358 auipc	ra,0x0
+720080e7  // 0000035c jalr	ra,1824(ra) # a78 <tx_byte>
+04500513  // 00000360 addi	a0,zero,69
+00000097  // 00000364 auipc	ra,0x0
+714080e7  // 00000368 jalr	ra,1812(ra) # a78 <tx_byte>
+06e00513  // 0000036c addi	a0,zero,110
+00000097  // 00000370 auipc	ra,0x0
+708080e7  // 00000374 jalr	ra,1800(ra) # a78 <tx_byte>
+07400513  // 00000378 addi	a0,zero,116
+00000097  // 0000037c auipc	ra,0x0
+6fc080e7  // 00000380 jalr	ra,1788(ra) # a78 <tx_byte>
+06500513  // 00000384 addi	a0,zero,101
+00000097  // 00000388 auipc	ra,0x0
+6f0080e7  // 0000038c jalr	ra,1776(ra) # a78 <tx_byte>
+07200513  // 00000390 addi	a0,zero,114
+00000097  // 00000394 auipc	ra,0x0
+6e4080e7  // 00000398 jalr	ra,1764(ra) # a78 <tx_byte>
+02000513  // 0000039c addi	a0,zero,32
+00000097  // 000003a0 auipc	ra,0x0
+6d8080e7  // 000003a4 jalr	ra,1752(ra) # a78 <tx_byte>
+06d00513  // 000003a8 addi	a0,zero,109
+00000097  // 000003ac auipc	ra,0x0
+6cc080e7  // 000003b0 jalr	ra,1740(ra) # a78 <tx_byte>
+06f00513  // 000003b4 addi	a0,zero,111
+00000097  // 000003b8 auipc	ra,0x0
+6c0080e7  // 000003bc jalr	ra,1728(ra) # a78 <tx_byte>
+06400513  // 000003c0 addi	a0,zero,100
+00000097  // 000003c4 auipc	ra,0x0
+6b4080e7  // 000003c8 jalr	ra,1716(ra) # a78 <tx_byte>
+06500513  // 000003cc addi	a0,zero,101
+00000097  // 000003d0 auipc	ra,0x0
+6a8080e7  // 000003d4 jalr	ra,1704(ra) # a78 <tx_byte>
+02000513  // 000003d8 addi	a0,zero,32
+00000097  // 000003dc auipc	ra,0x0
+69c080e7  // 000003e0 jalr	ra,1692(ra) # a78 <tx_byte>
+05b00513  // 000003e4 addi	a0,zero,91
+00000097  // 000003e8 auipc	ra,0x0
+690080e7  // 000003ec jalr	ra,1680(ra) # a78 <tx_byte>
+04100513  // 000003f0 addi	a0,zero,65
+00000097  // 000003f4 auipc	ra,0x0
+684080e7  // 000003f8 jalr	ra,1668(ra) # a78 <tx_byte>
+02c00513  // 000003fc addi	a0,zero,44
+00000097  // 00000400 auipc	ra,0x0
+678080e7  // 00000404 jalr	ra,1656(ra) # a78 <tx_byte>
+04900513  // 00000408 addi	a0,zero,73
+00000097  // 0000040c auipc	ra,0x0
+66c080e7  // 00000410 jalr	ra,1644(ra) # a78 <tx_byte>
+02c00513  // 00000414 addi	a0,zero,44
+00000097  // 00000418 auipc	ra,0x0
+660080e7  // 0000041c jalr	ra,1632(ra) # a78 <tx_byte>
+04200513  // 00000420 addi	a0,zero,66
+00000097  // 00000424 auipc	ra,0x0
+654080e7  // 00000428 jalr	ra,1620(ra) # a78 <tx_byte>
+05d00513  // 0000042c addi	a0,zero,93
+00000097  // 00000430 auipc	ra,0x0
+648080e7  // 00000434 jalr	ra,1608(ra) # a78 <tx_byte>
+03a00513  // 00000438 addi	a0,zero,58
+00000097  // 0000043c auipc	ra,0x0
+63c080e7  // 00000440 jalr	ra,1596(ra) # a78 <tx_byte>
+02000513  // 00000444 addi	a0,zero,32
+00000097  // 00000448 auipc	ra,0x0
+630080e7  // 0000044c jalr	ra,1584(ra) # a78 <tx_byte>
+00000013  // 00000450 addi	zero,zero,0
+00c12083  // 00000454 lw	ra,12(sp)
+00812403  // 00000458 lw	s0,8(sp)
+01010113  // 0000045c addi	sp,sp,16
+00008067  // 00000460 jalr	zero,0(ra)
+
+@119      // <fibonacci>
+fd010113  // 00000464 addi	sp,sp,-48
+02112623  // 00000468 sw	ra,44(sp)
+02812423  // 0000046c sw	s0,40(sp)
+03010413  // 00000470 addi	s0,sp,48
+05300513  // 00000474 addi	a0,zero,83
+00000097  // 00000478 auipc	ra,0x0
+600080e7  // 0000047c jalr	ra,1536(ra) # a78 <tx_byte>
+06500513  // 00000480 addi	a0,zero,101
+00000097  // 00000484 auipc	ra,0x0
+5f4080e7  // 00000488 jalr	ra,1524(ra) # a78 <tx_byte>
+07100513  // 0000048c addi	a0,zero,113
+00000097  // 00000490 auipc	ra,0x0
+5e8080e7  // 00000494 jalr	ra,1512(ra) # a78 <tx_byte>
+07500513  // 00000498 addi	a0,zero,117
+00000097  // 0000049c auipc	ra,0x0
+5dc080e7  // 000004a0 jalr	ra,1500(ra) # a78 <tx_byte>
+06500513  // 000004a4 addi	a0,zero,101
+00000097  // 000004a8 auipc	ra,0x0
+5d0080e7  // 000004ac jalr	ra,1488(ra) # a78 <tx_byte>
+06e00513  // 000004b0 addi	a0,zero,110
+00000097  // 000004b4 auipc	ra,0x0
+5c4080e7  // 000004b8 jalr	ra,1476(ra) # a78 <tx_byte>
+06300513  // 000004bc addi	a0,zero,99
+00000097  // 000004c0 auipc	ra,0x0
+5b8080e7  // 000004c4 jalr	ra,1464(ra) # a78 <tx_byte>
+06500513  // 000004c8 addi	a0,zero,101
+00000097  // 000004cc auipc	ra,0x0
+5ac080e7  // 000004d0 jalr	ra,1452(ra) # a78 <tx_byte>
+02000513  // 000004d4 addi	a0,zero,32
+00000097  // 000004d8 auipc	ra,0x0
+5a0080e7  // 000004dc jalr	ra,1440(ra) # a78 <tx_byte>
+04c00513  // 000004e0 addi	a0,zero,76
+00000097  // 000004e4 auipc	ra,0x0
+594080e7  // 000004e8 jalr	ra,1428(ra) # a78 <tx_byte>
+06500513  // 000004ec addi	a0,zero,101
+00000097  // 000004f0 auipc	ra,0x0
+588080e7  // 000004f4 jalr	ra,1416(ra) # a78 <tx_byte>
+06e00513  // 000004f8 addi	a0,zero,110
+00000097  // 000004fc auipc	ra,0x0
+57c080e7  // 00000500 jalr	ra,1404(ra) # a78 <tx_byte>
+03a00513  // 00000504 addi	a0,zero,58
+00000097  // 00000508 auipc	ra,0x0
+570080e7  // 0000050c jalr	ra,1392(ra) # a78 <tx_byte>
+02000513  // 00000510 addi	a0,zero,32
+00000097  // 00000514 auipc	ra,0x0
+564080e7  // 00000518 jalr	ra,1380(ra) # a78 <tx_byte>
+00000097  // 0000051c auipc	ra,0x0
+510080e7  // 00000520 jalr	ra,1296(ra) # a2c <rx_byte>
+fca42e23  // 00000524 sw	a0,-36(s0)
+fdc42783  // 00000528 lw	a5,-36(s0)
+00078513  // 0000052c addi	a0,a5,0
+00000097  // 00000530 auipc	ra,0x0
+548080e7  // 00000534 jalr	ra,1352(ra) # a78 <tx_byte>
+fdc42783  // 00000538 lw	a5,-36(s0)
+fd078793  // 0000053c addi	a5,a5,-48
+fcf42e23  // 00000540 sw	a5,-36(s0)
+fe042623  // 00000544 sw	zero,-20(s0)
+0100006f  // 00000548 jal	zero,558 <fibonacci+0xf4>
+00000097  // 0000054c auipc	ra,0x0
+4e0080e7  // 00000550 jalr	ra,1248(ra) # a2c <rx_byte>
+fea42623  // 00000554 sw	a0,-20(s0)
+fec42703  // 00000558 lw	a4,-20(s0)
+00d00793  // 0000055c addi	a5,zero,13
+fef716e3  // 00000560 bne	a4,a5,54c <fibonacci+0xe8>
+00a00513  // 00000564 addi	a0,zero,10
+00000097  // 00000568 auipc	ra,0x0
+510080e7  // 0000056c jalr	ra,1296(ra) # a78 <tx_byte>
+00d00513  // 00000570 addi	a0,zero,13
+00000097  // 00000574 auipc	ra,0x0
+504080e7  // 00000578 jalr	ra,1284(ra) # a78 <tx_byte>
+00100793  // 0000057c addi	a5,zero,1
+fef42223  // 00000580 sw	a5,-28(s0)
+fe042423  // 00000584 sw	zero,-24(s0)
+fe042023  // 00000588 sw	zero,-32(s0)
+03c0006f  // 0000058c jal	zero,5c8 <fibonacci+0x164>
+fe442703  // 00000590 lw	a4,-28(s0)
+fe842783  // 00000594 lw	a5,-24(s0)
+00f707b3  // 00000598 add	a5,a4,a5
+fcf42c23  // 0000059c sw	a5,-40(s0)
+fe442783  // 000005a0 lw	a5,-28(s0)
+fef42423  // 000005a4 sw	a5,-24(s0)
+fd842783  // 000005a8 lw	a5,-40(s0)
+fef42223  // 000005ac sw	a5,-28(s0)
+fd842503  // 000005b0 lw	a0,-40(s0)
+00000097  // 000005b4 auipc	ra,0x0
+518080e7  // 000005b8 jalr	ra,1304(ra) # acc <tx_uint>
+fe042783  // 000005bc lw	a5,-32(s0)
+00178793  // 000005c0 addi	a5,a5,1
+fef42023  // 000005c4 sw	a5,-32(s0)
+fe042783  // 000005c8 lw	a5,-32(s0)
+fdc42703  // 000005cc lw	a4,-36(s0)
+fce7e0e3  // 000005d0 bltu	a5,a4,590 <fibonacci+0x12c>
+00000013  // 000005d4 addi	zero,zero,0
+02c12083  // 000005d8 lw	ra,44(sp)
+02812403  // 000005dc lw	s0,40(sp)
+03010113  // 000005e0 addi	sp,sp,48
+00008067  // 000005e4 jalr	zero,0(ra)
+
+@17a      // <calculator>
+fd010113  // 000005e8 addi	sp,sp,-48
+02112623  // 000005ec sw	ra,44(sp)
+02812423  // 000005f0 sw	s0,40(sp)
+03010413  // 000005f4 addi	s0,sp,48
+04f00513  // 000005f8 addi	a0,zero,79
+00000097  // 000005fc auipc	ra,0x0
+47c080e7  // 00000600 jalr	ra,1148(ra) # a78 <tx_byte>
+07000513  // 00000604 addi	a0,zero,112
+00000097  // 00000608 auipc	ra,0x0
+470080e7  // 0000060c jalr	ra,1136(ra) # a78 <tx_byte>
+07300513  // 00000610 addi	a0,zero,115
+00000097  // 00000614 auipc	ra,0x0
+464080e7  // 00000618 jalr	ra,1124(ra) # a78 <tx_byte>
+03a00513  // 0000061c addi	a0,zero,58
+00000097  // 00000620 auipc	ra,0x0
+458080e7  // 00000624 jalr	ra,1112(ra) # a78 <tx_byte>
+02000513  // 00000628 addi	a0,zero,32
+00000097  // 0000062c auipc	ra,0x0
+44c080e7  // 00000630 jalr	ra,1100(ra) # a78 <tx_byte>
+05b00513  // 00000634 addi	a0,zero,91
+00000097  // 00000638 auipc	ra,0x0
+440080e7  // 0000063c jalr	ra,1088(ra) # a78 <tx_byte>
+02b00513  // 00000640 addi	a0,zero,43
+00000097  // 00000644 auipc	ra,0x0
+434080e7  // 00000648 jalr	ra,1076(ra) # a78 <tx_byte>
+02c00513  // 0000064c addi	a0,zero,44
+00000097  // 00000650 auipc	ra,0x0
+428080e7  // 00000654 jalr	ra,1064(ra) # a78 <tx_byte>
+02d00513  // 00000658 addi	a0,zero,45
+00000097  // 0000065c auipc	ra,0x0
+41c080e7  // 00000660 jalr	ra,1052(ra) # a78 <tx_byte>
+02c00513  // 00000664 addi	a0,zero,44
+00000097  // 00000668 auipc	ra,0x0
+410080e7  // 0000066c jalr	ra,1040(ra) # a78 <tx_byte>
+05e00513  // 00000670 addi	a0,zero,94
+00000097  // 00000674 auipc	ra,0x0
+404080e7  // 00000678 jalr	ra,1028(ra) # a78 <tx_byte>
+02c00513  // 0000067c addi	a0,zero,44
+00000097  // 00000680 auipc	ra,0x0
+3f8080e7  // 00000684 jalr	ra,1016(ra) # a78 <tx_byte>
+02600513  // 00000688 addi	a0,zero,38
+00000097  // 0000068c auipc	ra,0x0
+3ec080e7  // 00000690 jalr	ra,1004(ra) # a78 <tx_byte>
+05d00513  // 00000694 addi	a0,zero,93
+00000097  // 00000698 auipc	ra,0x0
+3e0080e7  // 0000069c jalr	ra,992(ra) # a78 <tx_byte>
+00a00513  // 000006a0 addi	a0,zero,10
+00000097  // 000006a4 auipc	ra,0x0
+3d4080e7  // 000006a8 jalr	ra,980(ra) # a78 <tx_byte>
+00d00513  // 000006ac addi	a0,zero,13
+00000097  // 000006b0 auipc	ra,0x0
+3c8080e7  // 000006b4 jalr	ra,968(ra) # a78 <tx_byte>
+fe042223  // 000006b8 sw	zero,-28(s0)
+fe042423  // 000006bc sw	zero,-24(s0)
+00000097  // 000006c0 auipc	ra,0x0
+36c080e7  // 000006c4 jalr	ra,876(ra) # a2c <rx_byte>
+fea42023  // 000006c8 sw	a0,-32(s0)
+fe042783  // 000006cc lw	a5,-32(s0)
+00078513  // 000006d0 addi	a0,a5,0
+00000097  // 000006d4 auipc	ra,0x0
+3a4080e7  // 000006d8 jalr	ra,932(ra) # a78 <tx_byte>
+00000097  // 000006dc auipc	ra,0x0
+350080e7  // 000006e0 jalr	ra,848(ra) # a2c <rx_byte>
+fca42e23  // 000006e4 sw	a0,-36(s0)
+fdc42783  // 000006e8 lw	a5,-36(s0)
+00078513  // 000006ec addi	a0,a5,0
+00000097  // 000006f0 auipc	ra,0x0
+388080e7  // 000006f4 jalr	ra,904(ra) # a78 <tx_byte>
+00000097  // 000006f8 auipc	ra,0x0
+334080e7  // 000006fc jalr	ra,820(ra) # a2c <rx_byte>
+fca42c23  // 00000700 sw	a0,-40(s0)
+fd842783  // 00000704 lw	a5,-40(s0)
+00078513  // 00000708 addi	a0,a5,0
+00000097  // 0000070c auipc	ra,0x0
+36c080e7  // 00000710 jalr	ra,876(ra) # a78 <tx_byte>
+0100006f  // 00000714 jal	zero,724 <calculator+0x13c>
+00000097  // 00000718 auipc	ra,0x0
+314080e7  // 0000071c jalr	ra,788(ra) # a2c <rx_byte>
+fea42423  // 00000720 sw	a0,-24(s0)
+fe842703  // 00000724 lw	a4,-24(s0)
+00d00793  // 00000728 addi	a5,zero,13
+fef716e3  // 0000072c bne	a4,a5,718 <calculator+0x130>
+00a00513  // 00000730 addi	a0,zero,10
+00000097  // 00000734 auipc	ra,0x0
+344080e7  // 00000738 jalr	ra,836(ra) # a78 <tx_byte>
+00d00513  // 0000073c addi	a0,zero,13
+00000097  // 00000740 auipc	ra,0x0
+338080e7  // 00000744 jalr	ra,824(ra) # a78 <tx_byte>
+fe042783  // 00000748 lw	a5,-32(s0)
+fd078793  // 0000074c addi	a5,a5,-48
+fef42023  // 00000750 sw	a5,-32(s0)
+fd842783  // 00000754 lw	a5,-40(s0)
+fd078793  // 00000758 addi	a5,a5,-48
+fcf42c23  // 0000075c sw	a5,-40(s0)
+fdc42783  // 00000760 lw	a5,-36(s0)
+02b00713  // 00000764 addi	a4,zero,43
+02e78a63  // 00000768 beq	a5,a4,79c <calculator+0x1b4>
+02b00713  // 0000076c addi	a4,zero,43
+00f76c63  // 00000770 bltu	a4,a5,788 <calculator+0x1a0>
+02300713  // 00000774 addi	a4,zero,35
+06e78a63  // 00000778 beq	a5,a4,7ec <calculator+0x204>
+02600713  // 0000077c addi	a4,zero,38
+04e78c63  // 00000780 beq	a5,a4,7d8 <calculator+0x1f0>
+07c0006f  // 00000784 jal	zero,800 <calculator+0x218>
+02d00713  // 00000788 addi	a4,zero,45
+02e78263  // 0000078c beq	a5,a4,7b0 <calculator+0x1c8>
+05e00713  // 00000790 addi	a4,zero,94
+02e78863  // 00000794 beq	a5,a4,7c4 <calculator+0x1dc>
+0680006f  // 00000798 jal	zero,800 <calculator+0x218>
+fe042703  // 0000079c lw	a4,-32(s0)
+fd842783  // 000007a0 lw	a5,-40(s0)
+00f707b3  // 000007a4 add	a5,a4,a5
+fef42623  // 000007a8 sw	a5,-20(s0)
+0980006f  // 000007ac jal	zero,844 <calculator+0x25c>
+fe042703  // 000007b0 lw	a4,-32(s0)
+fd842783  // 000007b4 lw	a5,-40(s0)
+40f707b3  // 000007b8 sub	a5,a4,a5
+fef42623  // 000007bc sw	a5,-20(s0)
+0840006f  // 000007c0 jal	zero,844 <calculator+0x25c>
+fe042703  // 000007c4 lw	a4,-32(s0)
+fd842783  // 000007c8 lw	a5,-40(s0)
+00f747b3  // 000007cc xor	a5,a4,a5
+fef42623  // 000007d0 sw	a5,-20(s0)
+0700006f  // 000007d4 jal	zero,844 <calculator+0x25c>
+fe042703  // 000007d8 lw	a4,-32(s0)
+fd842783  // 000007dc lw	a5,-40(s0)
+00f777b3  // 000007e0 and	a5,a4,a5
+fef42623  // 000007e4 sw	a5,-20(s0)
+05c0006f  // 000007e8 jal	zero,844 <calculator+0x25c>
+fe042703  // 000007ec lw	a4,-32(s0)
+fd842783  // 000007f0 lw	a5,-40(s0)
+00f777b3  // 000007f4 and	a5,a4,a5
+fef42623  // 000007f8 sw	a5,-20(s0)
+0480006f  // 000007fc jal	zero,844 <calculator+0x25c>
+04500513  // 00000800 addi	a0,zero,69
+00000097  // 00000804 auipc	ra,0x0
+274080e7  // 00000808 jalr	ra,628(ra) # a78 <tx_byte>
+07200513  // 0000080c addi	a0,zero,114
+00000097  // 00000810 auipc	ra,0x0
+268080e7  // 00000814 jalr	ra,616(ra) # a78 <tx_byte>
+07200513  // 00000818 addi	a0,zero,114
+00000097  // 0000081c auipc	ra,0x0
+25c080e7  // 00000820 jalr	ra,604(ra) # a78 <tx_byte>
+06f00513  // 00000824 addi	a0,zero,111
+00000097  // 00000828 auipc	ra,0x0
+250080e7  // 0000082c jalr	ra,592(ra) # a78 <tx_byte>
+07200513  // 00000830 addi	a0,zero,114
+00000097  // 00000834 auipc	ra,0x0
+244080e7  // 00000838 jalr	ra,580(ra) # a78 <tx_byte>
+00100793  // 0000083c addi	a5,zero,1
+fef42223  // 00000840 sw	a5,-28(s0)
+fe442783  // 00000844 lw	a5,-28(s0)
+00079863  // 00000848 bne	a5,zero,858 <calculator+0x270>
+fec42503  // 0000084c lw	a0,-20(s0)
+00000097  // 00000850 auipc	ra,0x0
+27c080e7  // 00000854 jalr	ra,636(ra) # acc <tx_uint>
+00a00513  // 00000858 addi	a0,zero,10
+00000097  // 0000085c auipc	ra,0x0
+21c080e7  // 00000860 jalr	ra,540(ra) # a78 <tx_byte>
+00d00513  // 00000864 addi	a0,zero,13
+00000097  // 00000868 auipc	ra,0x0
+210080e7  // 0000086c jalr	ra,528(ra) # a78 <tx_byte>
+00000013  // 00000870 addi	zero,zero,0
+02c12083  // 00000874 lw	ra,44(sp)
+02812403  // 00000878 lw	s0,40(sp)
+03010113  // 0000087c addi	sp,sp,48
+00008067  // 00000880 jalr	zero,0(ra)
+
+@221      // <interrupt>
+fd010113  // 00000884 addi	sp,sp,-48
+02112623  // 00000888 sw	ra,44(sp)
+02812423  // 0000088c sw	s0,40(sp)
+03010413  // 00000890 addi	s0,sp,48
+900007b7  // 00000894 lui	a5,0x90000
+03078793  // 00000898 addi	a5,a5,48 # 90000030 <__global_pointer$+0x8fffeab8>
+fef42023  // 0000089c sw	a5,-32(s0)
+900007b7  // 000008a0 lui	a5,0x90000
+03478793  // 000008a4 addi	a5,a5,52 # 90000034 <__global_pointer$+0x8fffeabc>
+fcf42e23  // 000008a8 sw	a5,-36(s0)
+04e00513  // 000008ac addi	a0,zero,78
+00000097  // 000008b0 auipc	ra,0x0
+1c8080e7  // 000008b4 jalr	ra,456(ra) # a78 <tx_byte>
+06500513  // 000008b8 addi	a0,zero,101
+00000097  // 000008bc auipc	ra,0x0
+1bc080e7  // 000008c0 jalr	ra,444(ra) # a78 <tx_byte>
+07700513  // 000008c4 addi	a0,zero,119
+00000097  // 000008c8 auipc	ra,0x0
+1b0080e7  // 000008cc jalr	ra,432(ra) # a78 <tx_byte>
+02000513  // 000008d0 addi	a0,zero,32
+00000097  // 000008d4 auipc	ra,0x0
+1a4080e7  // 000008d8 jalr	ra,420(ra) # a78 <tx_byte>
+05000513  // 000008dc addi	a0,zero,80
+00000097  // 000008e0 auipc	ra,0x0
+198080e7  // 000008e4 jalr	ra,408(ra) # a78 <tx_byte>
+04300513  // 000008e8 addi	a0,zero,67
+00000097  // 000008ec auipc	ra,0x0
+18c080e7  // 000008f0 jalr	ra,396(ra) # a78 <tx_byte>
+03a00513  // 000008f4 addi	a0,zero,58
+00000097  // 000008f8 auipc	ra,0x0
+180080e7  // 000008fc jalr	ra,384(ra) # a78 <tx_byte>
+02000513  // 00000900 addi	a0,zero,32
+00000097  // 00000904 auipc	ra,0x0
+174080e7  // 00000908 jalr	ra,372(ra) # a78 <tx_byte>
+fe042623  // 0000090c sw	zero,-20(s0)
+02000793  // 00000910 addi	a5,zero,32
+fef42223  // 00000914 sw	a5,-28(s0)
+0c00006f  // 00000918 jal	zero,9d8 <interrupt+0x154>
+00000097  // 0000091c auipc	ra,0x0
+110080e7  // 00000920 jalr	ra,272(ra) # a2c <rx_byte>
+fca42c23  // 00000924 sw	a0,-40(s0)
+fd842783  // 00000928 lw	a5,-40(s0)
+03000713  // 0000092c addi	a4,zero,48
+0ae7e263  // 00000930 bltu	a5,a4,9d4 <interrupt+0x150>
+03900713  // 00000934 addi	a4,zero,57
+00f77a63  // 00000938 bgeu	a4,a5,94c <interrupt+0xc8>
+fbf78713  // 0000093c addi	a4,a5,-65
+00500793  // 00000940 addi	a5,zero,5
+08e7e863  // 00000944 bltu	a5,a4,9d4 <interrupt+0x150>
+0480006f  // 00000948 jal	zero,990 <interrupt+0x10c>
+fe442783  // 0000094c lw	a5,-28(s0)
+ffc78793  // 00000950 addi	a5,a5,-4
+fef42223  // 00000954 sw	a5,-28(s0)
+fd842783  // 00000958 lw	a5,-40(s0)
+00078513  // 0000095c addi	a0,a5,0
+00000097  // 00000960 auipc	ra,0x0
+118080e7  // 00000964 jalr	ra,280(ra) # a78 <tx_byte>
+fd842783  // 00000968 lw	a5,-40(s0)
+fd078793  // 0000096c addi	a5,a5,-48
+fcf42c23  // 00000970 sw	a5,-40(s0)
+fd842703  // 00000974 lw	a4,-40(s0)
+fe442783  // 00000978 lw	a5,-28(s0)
+00f717b3  // 0000097c sll	a5,a4,a5
+fec42703  // 00000980 lw	a4,-20(s0)
+00f767b3  // 00000984 or	a5,a4,a5
+fef42623  // 00000988 sw	a5,-20(s0)
+04c0006f  // 0000098c jal	zero,9d8 <interrupt+0x154>
+fe442783  // 00000990 lw	a5,-28(s0)
+ffc78793  // 00000994 addi	a5,a5,-4
+fef42223  // 00000998 sw	a5,-28(s0)
+fd842783  // 0000099c lw	a5,-40(s0)
+00078513  // 000009a0 addi	a0,a5,0
+00000097  // 000009a4 auipc	ra,0x0
+0d4080e7  // 000009a8 jalr	ra,212(ra) # a78 <tx_byte>
+fd842783  // 000009ac lw	a5,-40(s0)
+fc978793  // 000009b0 addi	a5,a5,-55
+fcf42c23  // 000009b4 sw	a5,-40(s0)
+fd842703  // 000009b8 lw	a4,-40(s0)
+fe442783  // 000009bc lw	a5,-28(s0)
+00f717b3  // 000009c0 sll	a5,a4,a5
+fec42703  // 000009c4 lw	a4,-20(s0)
+00f767b3  // 000009c8 or	a5,a4,a5
+fef42623  // 000009cc sw	a5,-20(s0)
+0080006f  // 000009d0 jal	zero,9d8 <interrupt+0x154>
+00000013  // 000009d4 addi	zero,zero,0
+fe442783  // 000009d8 lw	a5,-28(s0)
+f4f040e3  // 000009dc blt	zero,a5,91c <interrupt+0x98>
+fe042423  // 000009e0 sw	zero,-24(s0)
+0100006f  // 000009e4 jal	zero,9f4 <interrupt+0x170>
+00000097  // 000009e8 auipc	ra,0x0
+044080e7  // 000009ec jalr	ra,68(ra) # a2c <rx_byte>
+fea42423  // 000009f0 sw	a0,-24(s0)
+fe842703  // 000009f4 lw	a4,-24(s0)
+00d00793  // 000009f8 addi	a5,zero,13
+fef716e3  // 000009fc bne	a4,a5,9e8 <interrupt+0x164>
+fe042783  // 00000a00 lw	a5,-32(s0)
+fec42703  // 00000a04 lw	a4,-20(s0)
+00e7a023  // 00000a08 sw	a4,0(a5)
+fdc42783  // 00000a0c lw	a5,-36(s0)
+00100713  // 00000a10 addi	a4,zero,1
+00e7a023  // 00000a14 sw	a4,0(a5)
+00000013  // 00000a18 addi	zero,zero,0
+02c12083  // 00000a1c lw	ra,44(sp)
+02812403  // 00000a20 lw	s0,40(sp)
+03010113  // 00000a24 addi	sp,sp,48
+00008067  // 00000a28 jalr	zero,0(ra)
+
+@28b      // <rx_byte>
+fe010113  // 00000a2c addi	sp,sp,-32
+00812e23  // 00000a30 sw	s0,28(sp)
+02010413  // 00000a34 addi	s0,sp,32
+900007b7  // 00000a38 lui	a5,0x90000
+01078793  // 00000a3c addi	a5,a5,16 # 90000010 <__global_pointer$+0x8fffea98>
+fef42623  // 00000a40 sw	a5,-20(s0)
+900007b7  // 00000a44 lui	a5,0x90000
+01478793  // 00000a48 addi	a5,a5,20 # 90000014 <__global_pointer$+0x8fffea9c>
+fef42423  // 00000a4c sw	a5,-24(s0)
+00000013  // 00000a50 addi	zero,zero,0
+fe842783  // 00000a54 lw	a5,-24(s0)
+0007a783  // 00000a58 lw	a5,0(a5)
+fe078ce3  // 00000a5c beq	a5,zero,a54 <rx_byte+0x28>
+fec42783  // 00000a60 lw	a5,-20(s0)
+0007a783  // 00000a64 lw	a5,0(a5)
+00078513  // 00000a68 addi	a0,a5,0
+01c12403  // 00000a6c lw	s0,28(sp)
+02010113  // 00000a70 addi	sp,sp,32
+00008067  // 00000a74 jalr	zero,0(ra)
+
+@29e      // <tx_byte>
+fd010113  // 00000a78 addi	sp,sp,-48
+02812623  // 00000a7c sw	s0,44(sp)
+03010413  // 00000a80 addi	s0,sp,48
+fca42e23  // 00000a84 sw	a0,-36(s0)
+900007b7  // 00000a88 lui	a5,0x90000
+02078793  // 00000a8c addi	a5,a5,32 # 90000020 <__global_pointer$+0x8fffeaa8>
+fef42623  // 00000a90 sw	a5,-20(s0)
+900007b7  // 00000a94 lui	a5,0x90000
+02478793  // 00000a98 addi	a5,a5,36 # 90000024 <__global_pointer$+0x8fffeaac>
+fef42423  // 00000a9c sw	a5,-24(s0)
+00000013  // 00000aa0 addi	zero,zero,0
+fe842783  // 00000aa4 lw	a5,-24(s0)
+0007a783  // 00000aa8 lw	a5,0(a5)
+fe078ce3  // 00000aac beq	a5,zero,aa4 <tx_byte+0x2c>
+fdc42703  // 00000ab0 lw	a4,-36(s0)
+fec42783  // 00000ab4 lw	a5,-20(s0)
+00e7a023  // 00000ab8 sw	a4,0(a5)
+00000013  // 00000abc addi	zero,zero,0
+02c12403  // 00000ac0 lw	s0,44(sp)
+03010113  // 00000ac4 addi	sp,sp,48
+00008067  // 00000ac8 jalr	zero,0(ra)
+
+@2b3      // <tx_uint>
+fd010113  // 00000acc addi	sp,sp,-48
+02112623  // 00000ad0 sw	ra,44(sp)
+02812423  // 00000ad4 sw	s0,40(sp)
+03010413  // 00000ad8 addi	s0,sp,48
+fca42e23  // 00000adc sw	a0,-36(s0)
+00900793  // 00000ae0 addi	a5,zero,9
+fef42423  // 00000ae4 sw	a5,-24(s0)
+06c0006f  // 00000ae8 jal	zero,b54 <tx_uint+0x88>
+fdc42783  // 00000aec lw	a5,-36(s0)
+fef42623  // 00000af0 sw	a5,-20(s0)
+0140006f  // 00000af4 jal	zero,b08 <tx_uint+0x3c>
+fec42503  // 00000af8 lw	a0,-20(s0)
+00000097  // 00000afc auipc	ra,0x0
+0e8080e7  // 00000b00 jalr	ra,232(ra) # be4 <div10>
+fea42623  // 00000b04 sw	a0,-20(s0)
+fec42703  // 00000b08 lw	a4,-20(s0)
+fe842783  // 00000b0c lw	a5,-24(s0)
+fee7e4e3  // 00000b10 bltu	a5,a4,af8 <tx_uint+0x2c>
+fec42503  // 00000b14 lw	a0,-20(s0)
+00000097  // 00000b18 auipc	ra,0x0
+08c080e7  // 00000b1c jalr	ra,140(ra) # ba4 <mod10>
+fea42223  // 00000b20 sw	a0,-28(s0)
+fe442783  // 00000b24 lw	a5,-28(s0)
+03078793  // 00000b28 addi	a5,a5,48
+00078513  // 00000b2c addi	a0,a5,0
+00000097  // 00000b30 auipc	ra,0x0
+f48080e7  // 00000b34 jalr	ra,-184(ra) # a78 <tx_byte>
+fe842703  // 00000b38 lw	a4,-24(s0)
+00070793  // 00000b3c addi	a5,a4,0
+00179793  // 00000b40 slli	a5,a5,0x1
+00e787b3  // 00000b44 add	a5,a5,a4
+00279793  // 00000b48 slli	a5,a5,0x2
+40e787b3  // 00000b4c sub	a5,a5,a4
+fef42423  // 00000b50 sw	a5,-24(s0)
+fdc42703  // 00000b54 lw	a4,-36(s0)
+fe842783  // 00000b58 lw	a5,-24(s0)
+f8e7e8e3  // 00000b5c bltu	a5,a4,aec <tx_uint+0x20>
+fdc42503  // 00000b60 lw	a0,-36(s0)
+00000097  // 00000b64 auipc	ra,0x0
+040080e7  // 00000b68 jalr	ra,64(ra) # ba4 <mod10>
+fea42223  // 00000b6c sw	a0,-28(s0)
+fe442783  // 00000b70 lw	a5,-28(s0)
+03078793  // 00000b74 addi	a5,a5,48
+00078513  // 00000b78 addi	a0,a5,0
+00000097  // 00000b7c auipc	ra,0x0
+efc080e7  // 00000b80 jalr	ra,-260(ra) # a78 <tx_byte>
+02000513  // 00000b84 addi	a0,zero,32
+00000097  // 00000b88 auipc	ra,0x0
+ef0080e7  // 00000b8c jalr	ra,-272(ra) # a78 <tx_byte>
+00000013  // 00000b90 addi	zero,zero,0
+02c12083  // 00000b94 lw	ra,44(sp)
+02812403  // 00000b98 lw	s0,40(sp)
+03010113  // 00000b9c addi	sp,sp,48
+00008067  // 00000ba0 jalr	zero,0(ra)
+
+@2e9      // <mod10>
+fe010113  // 00000ba4 addi	sp,sp,-32
+00812e23  // 00000ba8 sw	s0,28(sp)
+02010413  // 00000bac addi	s0,sp,32
+fea42623  // 00000bb0 sw	a0,-20(s0)
+0100006f  // 00000bb4 jal	zero,bc4 <mod10+0x20>
+fec42783  // 00000bb8 lw	a5,-20(s0)
+ff678793  // 00000bbc addi	a5,a5,-10
+fef42623  // 00000bc0 sw	a5,-20(s0)
+fec42703  // 00000bc4 lw	a4,-20(s0)
+00900793  // 00000bc8 addi	a5,zero,9
+fee7e6e3  // 00000bcc bltu	a5,a4,bb8 <mod10+0x14>
+fec42783  // 00000bd0 lw	a5,-20(s0)
+00078513  // 00000bd4 addi	a0,a5,0
+01c12403  // 00000bd8 lw	s0,28(sp)
+02010113  // 00000bdc addi	sp,sp,32
+00008067  // 00000be0 jalr	zero,0(ra)
+
+@2f9      // <div10>
+fd010113  // 00000be4 addi	sp,sp,-48
+02112623  // 00000be8 sw	ra,44(sp)
+02812423  // 00000bec sw	s0,40(sp)
+03010413  // 00000bf0 addi	s0,sp,48
+fca42e23  // 00000bf4 sw	a0,-36(s0)
+fdc42503  // 00000bf8 lw	a0,-36(s0)
+00000097  // 00000bfc auipc	ra,0x0
+fa8080e7  // 00000c00 jalr	ra,-88(ra) # ba4 <mod10>
+00050713  // 00000c04 addi	a4,a0,0
+fdc42783  // 00000c08 lw	a5,-36(s0)
+40e787b3  // 00000c0c sub	a5,a5,a4
+fcf42e23  // 00000c10 sw	a5,-36(s0)
+fe042423  // 00000c14 sw	zero,-24(s0)
+fe042623  // 00000c18 sw	zero,-20(s0)
+01c0006f  // 00000c1c jal	zero,c38 <div10+0x54>
+fe842783  // 00000c20 lw	a5,-24(s0)
+00178793  // 00000c24 addi	a5,a5,1
+fef42423  // 00000c28 sw	a5,-24(s0)
+fec42783  // 00000c2c lw	a5,-20(s0)
+00a78793  // 00000c30 addi	a5,a5,10
+fef42623  // 00000c34 sw	a5,-20(s0)
+fec42703  // 00000c38 lw	a4,-20(s0)
+fdc42783  // 00000c3c lw	a5,-36(s0)
+fef760e3  // 00000c40 bltu	a4,a5,c20 <div10+0x3c>
+fe842783  // 00000c44 lw	a5,-24(s0)
+00078513  // 00000c48 addi	a0,a5,0
+02c12083  // 00000c4c lw	ra,44(sp)
+02812403  // 00000c50 lw	s0,40(sp)
+03010113  // 00000c54 addi	sp,sp,48
+00008067  // 00000c58 jalr	zero,0(ra)
+
+@317      // <loopback>
+fd010113  // 00000c5c addi	sp,sp,-48
+02112623  // 00000c60 sw	ra,44(sp)
+02812423  // 00000c64 sw	s0,40(sp)
+03010413  // 00000c68 addi	s0,sp,48
+900007b7  // 00000c6c lui	a5,0x90000
+02078793  // 00000c70 addi	a5,a5,32 # 90000020 <__global_pointer$+0x8fffeaa8>
+fef42623  // 00000c74 sw	a5,-20(s0)
+900007b7  // 00000c78 lui	a5,0x90000
+01078793  // 00000c7c addi	a5,a5,16 # 90000010 <__global_pointer$+0x8fffea98>
+fef42423  // 00000c80 sw	a5,-24(s0)
+900007b7  // 00000c84 lui	a5,0x90000
+02478793  // 00000c88 addi	a5,a5,36 # 90000024 <__global_pointer$+0x8fffeaac>
+fef42223  // 00000c8c sw	a5,-28(s0)
+900007b7  // 00000c90 lui	a5,0x90000
+01478793  // 00000c94 addi	a5,a5,20 # 90000014 <__global_pointer$+0x8fffea9c>
+fef42023  // 00000c98 sw	a5,-32(s0)
+900007b7  // 00000c9c lui	a5,0x90000
+03078793  // 00000ca0 addi	a5,a5,48 # 90000030 <__global_pointer$+0x8fffeab8>
+fcf42e23  // 00000ca4 sw	a5,-36(s0)
+900007b7  // 00000ca8 lui	a5,0x90000
+03478793  // 00000cac addi	a5,a5,52 # 90000034 <__global_pointer$+0x8fffeabc>
+fcf42c23  // 00000cb0 sw	a5,-40(s0)
+00a00513  // 00000cb4 addi	a0,zero,10
+00000097  // 00000cb8 auipc	ra,0x0
+dc0080e7  // 00000cbc jalr	ra,-576(ra) # a78 <tx_byte>
+00d00513  // 00000cc0 addi	a0,zero,13
+00000097  // 00000cc4 auipc	ra,0x0
+db4080e7  // 00000cc8 jalr	ra,-588(ra) # a78 <tx_byte>
+00000013  // 00000ccc addi	zero,zero,0
+fe042783  // 00000cd0 lw	a5,-32(s0)
+0007a783  // 00000cd4 lw	a5,0(a5)
+fe078ce3  // 00000cd8 beq	a5,zero,cd0 <loopback+0x74>
+fe842783  // 00000cdc lw	a5,-24(s0)
+0007a783  // 00000ce0 lw	a5,0(a5)
+fcf42a23  // 00000ce4 sw	a5,-44(s0)
+fd442703  // 00000ce8 lw	a4,-44(s0)
+01b00793  // 00000cec addi	a5,zero,27
+04f71063  // 00000cf0 bne	a4,a5,d30 <loopback+0xd4>
+00a00513  // 00000cf4 addi	a0,zero,10
+00000097  // 00000cf8 auipc	ra,0x0
+d80080e7  // 00000cfc jalr	ra,-640(ra) # a78 <tx_byte>
+00d00513  // 00000d00 addi	a0,zero,13
+00000097  // 00000d04 auipc	ra,0x0
+d74080e7  // 00000d08 jalr	ra,-652(ra) # a78 <tx_byte>
+000017b7  // 00000d0c lui	a5,0x1
+d1878513  // 00000d10 addi	a0,a5,-744 # d18 <loopback+0xbc>
+00000097  // 00000d14 auipc	ra,0x0
+db8080e7  // 00000d18 jalr	ra,-584(ra) # acc <tx_uint>
+fdc42783  // 00000d1c lw	a5,-36(s0)
+0007a023  // 00000d20 sw	zero,0(a5)
+fd842783  // 00000d24 lw	a5,-40(s0)
+00100713  // 00000d28 addi	a4,zero,1
+00e7a023  // 00000d2c sw	a4,0(a5)
+00000013  // 00000d30 addi	zero,zero,0
+fe442783  // 00000d34 lw	a5,-28(s0)
+0007a783  // 00000d38 lw	a5,0(a5)
+fe078ce3  // 00000d3c beq	a5,zero,d34 <loopback+0xd8>
+fec42783  // 00000d40 lw	a5,-20(s0)
+fd442703  // 00000d44 lw	a4,-44(s0)
+00e7a023  // 00000d48 sw	a4,0(a5)
+f81ff06f  // 00000d4c jal	zero,ccc <loopback+0x70>
+00000013  // 00000d50 addi	zero,zero,0
+00000013  // 00000d54 addi	zero,zero,0
+00000013  // 00000d58 addi	zero,zero,0
+00000013  // 00000d5c addi	zero,zero,0
+00000097  // 00000d60 auipc	ra,0x0
+000080e7  // 00000d64 jalr	ra,0(ra) # d60 <loopback+0x104>
+00000013  // 00000d68 addi	zero,zero,0
+00000013  // 00000d6c addi	zero,zero,0
+00000013  // 00000d70 addi	zero,zero,0
+00000013  // 00000d74 addi	zero,zero,0

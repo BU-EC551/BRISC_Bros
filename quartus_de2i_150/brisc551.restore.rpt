@@ -1,0 +1,106 @@
+Restore Archived Project report for brisc551
+Tue Apr 10 08:44:09 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Tue Apr 10 08:44:09 2018 ;
+; Revision Name                   ; brisc551                              ;
+; Top-level Entity Name           ; DE1_SOC_top                           ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/alan/Documents/ec551-project/quartus/brisc551.qar' into the '/home/alan/Documents/ec551-project/quartus_de2i_150/' directory
+Info: Generated report 'brisc551.restore.rpt'
+Info (23030): Evaluation of Tcl script /home/alan/intelFPGA_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 1051 megabytes
+    Info: Processing ended: Tue Apr 10 08:44:09 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++-------------------------------------------+
+; Files Restored                            ;
++-------------------------------------------+
+; File Name                                 ;
++-------------------------------------------+
+; qar_info.json                             ;
+; hardware/src/ALU.v                        ;
+; hardware/src/DE1_SOC_top.v                ;
+; hardware/src/RISC_V_Core.v                ;
+; hardware/src/bram.v                       ;
+; hardware/src/bsram.v                      ;
+; hardware/src/control_unit.v               ;
+; hardware/src/d_mem_interface.v            ;
+; hardware/src/debounce.v                   ;
+; hardware/src/decode.v                     ;
+; hardware/src/execute.v                    ;
+; hardware/src/fetch.v                      ;
+; hardware/src/frame_buffer.v               ;
+; hardware/src/hex_decoder.v                ;
+; hardware/src/i_mem_interface.v            ;
+; hardware/src/instructions.dat             ;
+; hardware/src/memory.v                     ;
+; hardware/src/mm_reg.v                     ;
+; hardware/src/mm_vga_reg.v                 ;
+; hardware/src/regFile.v                    ;
+; hardware/src/tb_RISC_V_Core.v             ;
+; hardware/src/vga_ctrl.v                   ;
+; hardware/src/writeback.v                  ;
+; hardware/src/zeros.dat                    ;
+; quartus/IP/pll_25_125.cmp                 ;
+; quartus/IP/pll_25_125.qip                 ;
+; quartus/IP/pll_25_125.v                   ;
+; quartus/IP/pll_25_125/pll_25_125_0002.qip ;
+; quartus/IP/pll_25_125/pll_25_125_0002.v   ;
+; quartus/brisc551.qpf                      ;
+; quartus/brisc551.qsf                      ;
+; quartus/brisc551.sdc                      ;
+; quartus/assignment_defaults.qdf           ;
++-------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

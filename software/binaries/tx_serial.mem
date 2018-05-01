@@ -1,0 +1,96 @@
+
+@0        // <kernel-0x10>
+00000013  // 00000000 addi	zero,zero,0
+00000013  // 00000004 addi	zero,zero,0
+00000013  // 00000008 addi	zero,zero,0
+00000013  // 0000000c addi	zero,zero,0
+
+@4        // <kernel>
+00000013  // 00000010 addi	zero,zero,0
+00000093  // 00000014 addi	ra,zero,0
+1c200113  // 00000018 addi	sp,zero,450
+00000193  // 0000001c addi	gp,zero,0
+00000213  // 00000020 addi	tp,zero,0
+00000293  // 00000024 addi	t0,zero,0
+00000313  // 00000028 addi	t1,zero,0
+00000393  // 0000002c addi	t2,zero,0
+00000413  // 00000030 addi	s0,zero,0
+00000513  // 00000034 addi	a0,zero,0
+00000593  // 00000038 addi	a1,zero,0
+00000613  // 0000003c addi	a2,zero,0
+00000993  // 00000040 addi	s3,zero,0
+00000713  // 00000044 addi	a4,zero,0
+00000793  // 00000048 addi	a5,zero,0
+00000813  // 0000004c addi	a6,zero,0
+00000893  // 00000050 addi	a7,zero,0
+00000913  // 00000054 addi	s2,zero,0
+00000993  // 00000058 addi	s3,zero,0
+00000a13  // 0000005c addi	s4,zero,0
+00000a93  // 00000060 addi	s5,zero,0
+00000b13  // 00000064 addi	s6,zero,0
+00000b93  // 00000068 addi	s7,zero,0
+00000c13  // 0000006c addi	s8,zero,0
+00000c93  // 00000070 addi	s9,zero,0
+00000d13  // 00000074 addi	s10,zero,0
+00000d93  // 00000078 addi	s11,zero,0
+00000e13  // 0000007c addi	t3,zero,0
+00000e93  // 00000080 addi	t4,zero,0
+00000f13  // 00000084 addi	t5,zero,0
+00000f93  // 00000088 addi	t6,zero,0
+00000097  // 0000008c auipc	ra,0x0
+038080e7  // 00000090 jalr	ra,56(ra) # c4 <main>
+00000013  // 00000094 addi	zero,zero,0
+00050493  // 00000098 addi	s1,a0,0
+00000013  // 0000009c addi	zero,zero,0
+00000013  // 000000a0 addi	zero,zero,0
+00000013  // 000000a4 addi	zero,zero,0
+00000013  // 000000a8 addi	zero,zero,0
+00000097  // 000000ac auipc	ra,0x0
+000080e7  // 000000b0 jalr	ra,0(ra) # ac <kernel+0x9c>
+00000013  // 000000b4 addi	zero,zero,0
+00000013  // 000000b8 addi	zero,zero,0
+00000013  // 000000bc addi	zero,zero,0
+00000013  // 000000c0 addi	zero,zero,0
+
+@31       // <main>
+fe010113  // 000000c4 addi	sp,sp,-32
+00812e23  // 000000c8 sw	s0,28(sp)
+02010413  // 000000cc addi	s0,sp,32
+900007b7  // 000000d0 lui	a5,0x90000
+fef42423  // 000000d4 sw	a5,-24(s0)
+900007b7  // 000000d8 lui	a5,0x90000
+02078793  // 000000dc addi	a5,a5,32 # 90000020 <__global_pointer$+0x8ffff6b8>
+fef42223  // 000000e0 sw	a5,-28(s0)
+900007b7  // 000000e4 lui	a5,0x90000
+02478793  // 000000e8 addi	a5,a5,36 # 90000024 <__global_pointer$+0x8ffff6bc>
+fef42023  // 000000ec sw	a5,-32(s0)
+fe042623  // 000000f0 sw	zero,-20(s0)
+0300006f  // 000000f4 jal	zero,124 <main+0x60>
+fe042783  // 000000f8 lw	a5,-32(s0)
+0007a783  // 000000fc lw	a5,0(a5)
+00078c63  // 00000100 beq	a5,zero,118 <main+0x54>
+fec42783  // 00000104 lw	a5,-20(s0)
+03078793  // 00000108 addi	a5,a5,48
+00078713  // 0000010c addi	a4,a5,0
+fe442783  // 00000110 lw	a5,-28(s0)
+00e7a023  // 00000114 sw	a4,0(a5)
+fec42783  // 00000118 lw	a5,-20(s0)
+00178793  // 0000011c addi	a5,a5,1
+fef42623  // 00000120 sw	a5,-20(s0)
+fec42703  // 00000124 lw	a4,-20(s0)
+00900793  // 00000128 addi	a5,zero,9
+fce7d6e3  // 0000012c bge	a5,a4,f8 <main+0x34>
+fe842783  // 00000130 lw	a5,-24(s0)
+00100713  // 00000134 addi	a4,zero,1
+00e7a023  // 00000138 sw	a4,0(a5)
+0000006f  // 0000013c jal	zero,13c <main+0x78>
+00000013  // 00000140 addi	zero,zero,0
+00000013  // 00000144 addi	zero,zero,0
+00000013  // 00000148 addi	zero,zero,0
+00000013  // 0000014c addi	zero,zero,0
+00000097  // 00000150 auipc	ra,0x0
+000080e7  // 00000154 jalr	ra,0(ra) # 150 <main+0x8c>
+00000013  // 00000158 addi	zero,zero,0
+00000013  // 0000015c addi	zero,zero,0
+00000013  // 00000160 addi	zero,zero,0
+00000013  // 00000164 addi	zero,zero,0
