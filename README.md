@@ -16,8 +16,9 @@ The hardware folder contains all of the verilog and test benches. Testing was
 done in simulation and with the Signal Tap Logic Analyzer provided by Altera.
 The quartus directory contains IP provided by Altera (FIFOs and PLLs) as well as
 some of the quartus settings files that can be imported into another quartus project.
-The software directoty contains the RISC-V compiler and our test programs from
-throughout the semester.
+The software directoty contains our test programs from throughout the semester.
+The RISC-V gcc compiler is larger than 100MB (github's size limit) and cannot be
+included in this repo.
 
 ## Demo Directions
 
